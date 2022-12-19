@@ -1,15 +1,13 @@
 <template>
-
+  <Homepage/>
 </template>
 
-<style lang="scss">
-
-</style>
-
 <script>
-import Homepage from "@/views/Homepage";
+import Homepage from "@/views/Home-page";
 
 export default {
-  components: Homepage
-}
+  components: Homepage,
+};
 </script>
+
+<style lang="scss"></style>
