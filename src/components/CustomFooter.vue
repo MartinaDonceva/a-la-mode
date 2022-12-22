@@ -6,10 +6,8 @@
 
 <script>
 export default {
-  name: "CustomFooter"
-}
+  name: "CustomFooter",
+};
 </script>
 
-<style scoped>
-
-</style>
+<style scoped></style>

@@ -6,10 +6,8 @@
 
 <script>
 export default {
-  name: "CustomHeader"
-}
+  name: "CustomHeader",
+};
 </script>
 
-<style scoped>
-
-</style>
+<style scoped></style>

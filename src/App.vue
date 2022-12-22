@@ -1,18 +1,15 @@
 <template>
-<CustomLayout>
-  <Homepage/>
-</CustomLayout>
+  <custom-header/>
+  <router-view/>
+  <custom-footer/>
 </template>
 
 <script>
-import Homepage from "@/views/Home-page.vue";
-import CustomLayout from "@/components/layouts/CustomLayout.vue";
 
+import CustomHeader from "@/components/CustomHeader";
+import CustomFooter from "@/components/CustomFooter";
 export default {
-  components: {
-    Homepage,
-    CustomLayout
-  }
+  components: {CustomFooter, CustomHeader}
 };
 </script>
 
