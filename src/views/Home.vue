@@ -1,6 +1,10 @@
 <template>
-  <div>
-    Homepage
+  <div class="container">
+    <hr/>
+    <div class="display-3 text-center textColor ">
+      SHOP
+    </div>
+    <hr/>
   </div>
 </template>
 
@@ -12,5 +16,7 @@ export default {
 </script>
 
 <style scoped>
-
+.textColor{
+  color: dimgrey;
+}
 </style>
