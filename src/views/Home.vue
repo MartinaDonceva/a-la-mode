@@ -1,22 +1,22 @@
 <template>
   <div class="container">
-    <hr/>
-    <div class="display-3 text-center textColor ">
-      SHOP
-    </div>
-    <hr/>
+    <hr />
+    <div class="display-3 text-center text-color">SHOP</div>
+    <hr />
+    <custom-cards />
   </div>
 </template>
 
 <script>
+import CustomCards from "@/components/CustomCards";
 export default {
-  // eslint-disable-next-line vue/multi-word-component-names
-  name: "Home"
-}
+  name: "Home",
+  components: { CustomCards },
+};
 </script>
 
 <style scoped>
-.textColor{
+.text-color {
   color: dimgrey;
 }
 </style>

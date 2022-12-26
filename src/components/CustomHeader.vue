@@ -1,13 +1,15 @@
 <template>
-  <nav class="navbar navbar-expand-lg navbar-dark">
+  <nav class="navbar bg-white navbar-expand-lg navbar-light sticky-top">
     <div class="container">
       <div class="text-center">
-        <p class="textColor mb-0 py-2 display-3">A  La  Mode</p>
+        <p class="text-color mb-0 py-2 display-3">A La Mode</p>
       </div>
       <div class="ms-lg-auto">
-        <a class=" textColor navbar-brand fs-4 fw-light" href="#">HOME</a>
-        <a class="textColor navbar-brand fs-4 fw-light" href="#">CONTACT</a>
-        <a class="textColor navbar-brand fs-4 fw-light" href="#"><i class="fa fa-shopping-cart" aria-hidden="true"></i></a>
+        <a class="text-color navbar-brand fs-4 fw-light" href="#">HOME</a>
+        <a class="text-color navbar-brand fs-4 fw-light" href="#">CONTACT</a>
+        <a class="text-color navbar-brand fs-4 fw-light" href="#"
+          ><i class="fa fa-shopping-cart" aria-hidden="true"></i
+        ></a>
       </div>
     </div>
   </nav>
@@ -21,9 +23,10 @@ export default {
 
 <style scoped>
 p {
-  font-family: 'Brush Script MT', cursive;
+  font-family: "Brush Script MT", cursive;
 }
-.textColor{
+
+.text-color {
   color: dimgrey;
 }
 </style>
