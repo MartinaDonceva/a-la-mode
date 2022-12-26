@@ -1,5 +1,5 @@
 <template>
-  <footer class="container-fluid mt-5">
+  <footer class="container-fluid mt-5 py-5">
     <div class="text-center">
       <h4 class="textColor fw-bolder">CONTACT US</h4>
       <div class="text-center d-flex gap-2 justify-content-center">
