@@ -8,9 +8,9 @@
       <div class="collapse navbar-collapse text-center" id="navbarSupportedContent">
         <ul class="navbar-nav ms-lg-auto mb-2 mb-lg-0">
           <li class="nav-item">
-            <a class="text-color navbar-brand fs-4 fw-light" href="#">HOME</a></li>
+            <router-link :to="{name:'home'}" class="text-color navbar-brand fs-4 fw-light">HOME</router-link></li>
           <li class="nav-item">
-            <a class="text-color navbar-brand fs-4 fw-light" href="#">CONTACT</a>
+            <router-link :to="{name:'contact'}" class="text-color navbar-brand fs-4 fw-light" >CONTACT</router-link>
           </li>
           <li>
             <a class="text-color navbar-brand fs-4 fw-light" href="#"><i class="fa fa-shopping-cart" aria-hidden="true"></i></a>
