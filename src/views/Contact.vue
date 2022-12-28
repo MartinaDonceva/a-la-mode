@@ -2,7 +2,7 @@
   <div class="container">
     <div class="row mt-5 text-color">
       <div class="col-lg-6">
-        <h1 class="fw-bold mt-5">Контактирајте не.</h1>
+        <h1 class="fw-bold mt-5">Стапете во контакт со нас.</h1>
         <hr/>
         <div class="mt-5">
           Lorem ipsum dolor sit amet, consectetur adipiscing elit,
@@ -18,23 +18,23 @@
         <form>
           <div class="row g-3 ">
             <div class="col">
-              <label for="name" class="form-label">First Name*</label>
+              <label for="name" class="form-label">Име*</label>
               <input type="text" class="form-control" id="name">
             </div>
             <div class="col">
-              <label for="Lastname" class="form-label">Last Name*</label>
+              <label for="Lastname" class="form-label">Презиме*</label>
               <input type="text" class="form-control" id="LastName">
             </div>
             <div class="mb-3">
-              <label for="email" class="form-label">Email address*</label>
+              <label for="email" class="form-label">Корисничка адреса*</label>
               <input type="email" class="form-control" id="email">
             </div>
             <div class="mb-3">
-              <label for="subject" class="form-label">Subject*</label>
+              <label for="subject" class="form-label">Наслов*</label>
               <input type="text" class="form-control" id="subject">
             </div>
             <div class="mb-3">
-              <label for="message" class="form-label">Message*</label>
+              <label for="message" class="form-label">Порака*</label>
               <textarea class="form-control" id="message" rows="1"></textarea>
             </div>
           </div>
