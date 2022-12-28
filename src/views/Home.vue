@@ -1,7 +1,7 @@
 <template>
   <div class="container">
     <hr />
-    <div class="display-3 text-center text-color">SHOP</div>
+    <div class="display-3 text-center text-color">ПРОДАВНИЦА</div>
     <hr />
     <custom-cards />
   </div>
