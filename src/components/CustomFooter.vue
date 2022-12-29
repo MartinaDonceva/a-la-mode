@@ -3,14 +3,8 @@
     <div class="text-center">
       <h4 class="textColor fw-bolder">КОНТАКТИРАЈТЕ НЕ</h4>
       <div class="text-center d-flex gap-2 justify-content-center">
-        <a class="textColor navbar-brand fs-4 fw-light" href="#"
-          ><i class="fa fa-instagram" aria-hidden="true"></i
-        ></a>
-        <a class="textColor navbar-brand fs-4 fw-light" href="#"
-          ><i class="fa fa-facebook-official" aria-hidden="true"></i
-        ></a>
-        <a class="textColor navbar-brand fs-4 fw-light" href="#"
-          ><i class="fa fa-twitter-square" aria-hidden="true"></i
+        <a v-for="icon in icons" class="textColor navbar-brand fs-4 fw-light" href="#"
+        ><i :class=icon aria-hidden="true"></i
         ></a>
       </div>
     </div>
@@ -20,7 +14,16 @@
 <script>
 export default {
   name: "CustomFooter",
-};
+  data() {
+    return {
+      icons: [
+        "fa fa-instagram",
+        "fa fa-facebook-official",
+        "fa fa-twitter-square"
+      ]
+    }
+  }
+}
 </script>
 
 <style scoped>
