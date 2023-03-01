@@ -1,7 +1,7 @@
 <template>
   <nav class="navbar navbar-expand-lg navbar-light bg-white sticky-top">
     <div class="container">
-      <p class="text-color mb-0 py-2 display-3 font-fam" href="#">A La Mode</p>
+      <router-link :to="{name:'home'}" class="text-color mb-0 py-2 display-3 font-fam">A La Mode</router-link>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
@@ -30,6 +30,7 @@ export default {
 <style scoped>
 .font-fam {
   font-family: "Brush Script MT", cursive;
+  text-decoration: none;
 }
 .text-color {
   color: dimgrey;

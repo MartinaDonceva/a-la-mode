@@ -14,15 +14,15 @@
           <h4>(555) 555-5555</h4>
         </div>
       </div>
-      <div class="col-lg-6">
+      <div class="col-lg-6 pt-lg-5">
         <form>
           <div class="row g-3 ">
             <div class="col">
-              <label for="name" class="form-label">Име*</label>
+              <label for="name" class="form-label">Име</label>
               <input type="text" class="form-control" id="name">
             </div>
             <div class="col">
-              <label for="Lastname" class="form-label">Презиме*</label>
+              <label for="Lastname" class="form-label">Презиме</label>
               <input type="text" class="form-control" id="LastName">
             </div>
             <div class="mb-3">
