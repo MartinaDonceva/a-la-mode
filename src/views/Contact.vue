@@ -15,27 +15,28 @@
         </div>
       </div>
       <div class="col-lg-6 pt-lg-5">
-        <form>
+        <form @submit.prevent="submitForm" method="post">
+
           <div class="row g-3 ">
             <div class="col">
               <label for="name" class="form-label">Име</label>
-              <input type="text" class="form-control" id="name">
+              <input type="text" v-model="form.name" class="form-control" id="name">
             </div>
             <div class="col">
               <label for="Lastname" class="form-label">Презиме</label>
-              <input type="text" class="form-control" id="LastName">
+              <input type="text" v-model="form.surname" class="form-control" id="LastName">
             </div>
             <div class="mb-3">
               <label for="email" class="form-label">Корисничка адреса*</label>
-              <input type="email" class="form-control" id="email">
+              <input type="email" v-model="form.email" class="form-control" id="email">
             </div>
             <div class="mb-3">
               <label for="subject" class="form-label">Наслов*</label>
-              <input type="text" class="form-control" id="subject">
+              <input type="text" v-model="form.subject" class="form-control" id="subject">
             </div>
             <div class="mb-3">
               <label for="message" class="form-label">Порака*</label>
-              <textarea class="form-control" id="message" rows="1"></textarea>
+              <textarea class="form-control" v-model="form.message" id="message" rows="1"></textarea>
             </div>
           </div>
           <div class="mt-3">
@@ -53,10 +54,25 @@ export default {
 }
 </script>
 
+<script setup>
+import axios from "axios";
+
+const form = {
+  name: '',
+  surname: '',
+  email: '',
+  subject: '',
+  message: ''
+}
+const submitForm = async () => {
+  const response = axios.post('/clients', form);
+}
+</script>
 <style scoped>
 .text-color {
   color: dimgrey;
 }
+
 .btn-bg-orange {
   background-color: #fda71d;
 }
