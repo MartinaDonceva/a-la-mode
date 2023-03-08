@@ -15,7 +15,7 @@
         </div>
       </div>
       <div class="col-lg-6 pt-lg-5">
-        <form @submit.prevent="submitForm" method="post">
+        <form @submit.prevent="submitForm" method="post" id="myForm">
 
           <div class="row g-3 ">
             <div class="col">
@@ -65,8 +65,15 @@ const form = {
   message: ''
 }
 const submitForm = async () => {
-  const response = axios.post('/clients', form);
+  const response = axios.post('/clients', form).then(() => {
+    // Reset form fields after successful submission
+    document.getElementById('myForm').reset();
+  })
+      .catch(error => {
+        console.log(error);
+      });
 }
+
 </script>
 <style scoped>
 .text-color {
