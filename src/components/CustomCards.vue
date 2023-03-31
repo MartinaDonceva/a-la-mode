@@ -46,12 +46,16 @@ export default {
     return {
       products
     };
-  },
-};
+  }
+}
 </script>
 
 <style scoped>
-.card-style{
+.card-style {
   border: none;
+}
+
+.btn-bg-orange {
+  background-color: #fda71d;
 }
 </style>

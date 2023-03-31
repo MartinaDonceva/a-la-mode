@@ -13,7 +13,8 @@
             <router-link :to="{name:'contact'}" class="text-color navbar-brand fs-4 fw-light" >КОНТАКТ</router-link>
           </li>
           <li>
-            <a class="text-color navbar-brand fs-4 fw-light" href="#"><i class="fa fa-shopping-cart" aria-hidden="true"></i></a>
+              <router-link :to="{name:'cart'}" class="text-color navbar-brand fs-4 fw-light" href="#"><i
+                  class="fa fa-shopping-cart" aria-hidden="true"></i></router-link>
           </li>
         </ul>
       </div>
@@ -26,7 +27,6 @@ export default {
   name: "CustomHeader",
 };
 </script>
-
 <style scoped>
 .font-fam {
   font-family: "Brush Script MT", cursive;
