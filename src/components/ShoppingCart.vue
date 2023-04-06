@@ -80,11 +80,11 @@ export default {
 </script>
 <script setup>
 import {onMounted, ref} from "vue";
-const cart = localStorage.getItem("cartItems")
 const cartItems = ref(null)
 let cartTotal = 0
 
 const loadItems = () => {
+  const cart = localStorage.getItem("cartItems")
   if (cart) {
     cartItems.value = JSON.parse(cart);
   }
@@ -92,6 +92,7 @@ const loadItems = () => {
 }
 
 const totalPrice = () => {
+  cartTotal = 0;
   for(const item of cartItems.value){
     cartTotal+=item.data.price
   }

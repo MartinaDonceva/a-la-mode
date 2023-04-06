@@ -24,35 +24,15 @@
   </div>
 </template>
 
-<script>
-
-
-export default {
-  name: "Product",
-  data() {
-    return {
-      cart: [],
-    }
-  },
-  methods: {
-    addToCart(product) {
-      const storedCart = JSON.parse(localStorage.getItem("cartItems")) || [];
-      storedCart.push(product);
-      localStorage.setItem("cartItems", JSON.stringify(storedCart));
-      this.cart = storedCart;
-    }
-  },
-
-}
-</script>
 <script setup>
 import {onMounted, ref} from "vue";
 import axios from "axios";
 import {useRoute} from "vue-router";
+
 const route = useRoute()
 const product = ref(null)
+const cart = ref(null)
 
-defineProps({})
 onMounted(
     () => {
       const productId = route.params.id;
@@ -61,14 +41,19 @@ onMounted(
 
 
         const savedCartItems = localStorage.getItem("cartItems");
-        console.log(savedCartItems)
         if (savedCartItems) {
-          this.cart = JSON.parse(savedCartItems);
+          cart.value = JSON.parse(savedCartItems);
         }
       });
     }
 )
 
+const addToCart = (product) => {
+  const storedCart = JSON.parse(localStorage.getItem("cartItems")) || [];
+  storedCart.push(product);
+  localStorage.setItem("cartItems", JSON.stringify(storedCart));
+  cart.value = storedCart;
+}
 </script>
 
 <style scoped>
