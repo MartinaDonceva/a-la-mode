@@ -56,6 +56,7 @@ export default {
 
 <script setup>
 import axios from "axios";
+import {useToast} from "vue-toastification";
 
 const form = {
   name: '',
@@ -64,15 +65,18 @@ const form = {
   subject: '',
   message: ''
 }
+const toast = useToast();
 const submitForm = async () => {
-  const response = axios.post('/clients', form).then(() => {
-    // Reset form fields after successful submission
+  try {
+    const response = await axios.post('/clients', form);
     document.getElementById('myForm').reset();
-  })
-      .catch(error => {
-        console.log(error);
-      });
+    toast.success("Успешно испратена порака");
+  } catch (error) {
+    console.log(error);
+    toast.error("Секое поле е задолжително.");
+  }
 }
+
 
 </script>
 <style scoped>

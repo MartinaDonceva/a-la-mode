@@ -80,6 +80,7 @@ export default {
 </script>
 <script setup>
 import {onMounted, ref} from "vue";
+import {POSITION, useToast} from "vue-toastification";
 const cartItems = ref(null)
 let cartTotal = 0
 
@@ -105,6 +106,9 @@ const removeItem = (id) => {
   localStorage.setItem("cartItems", JSON.stringify(cart));
   loadItems();
   totalPrice();
+  const toast = useToast();
+  toast.success("Успешно ибришан производ.");
+
 }
 onMounted(
     () => loadItems()

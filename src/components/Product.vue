@@ -28,6 +28,7 @@
 import {onMounted, ref} from "vue";
 import axios from "axios";
 import {useRoute} from "vue-router";
+import {useToast} from "vue-toastification";
 
 const route = useRoute()
 const product = ref(null)
@@ -53,6 +54,8 @@ const addToCart = (product) => {
   storedCart.push(product);
   localStorage.setItem("cartItems", JSON.stringify(storedCart));
   cart.value = storedCart;
+  const toast = useToast();
+  toast.success("Успешно додаден производ.")
 }
 </script>
 
